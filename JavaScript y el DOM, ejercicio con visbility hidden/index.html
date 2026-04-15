@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #caja1{
+        visibility: hidden;
+    }
+    </style>
+    <script>
+        function mostrarProvincia(){
+            let pais = document.getElementById("pais").value;
+            if(pais == "esp"){
+                document.getElementById("caja1").style.visibility = "visible";
+            }else{
+                document.getElementById("caja1").style.visibility = "hidden";
+            }
+}
+    </script>
+</head>
+<body>
+    <h2>Destino de viajes</h2>
+    <label for="pais">País:</label>
+    <select name="pais" id="pais" onchange="mostrarProvincia()">
+        <option value="elija">Elija destino</option>
+        <option value="esp">España</option>
+        <option value="fueraesp">Fuera de España</option>
+    </select>
+    <br>
+    <div id="caja1">
+    <label for="provincia">Provincia:</label>
+    <select name="provincia" id="provincia">
+        <option value="eli">Elija provincia</option>
+        <option value="mad">Madrid</option>
+        <option value="bar">Barcelona</option>
+        <option value="val">Valencia</option>
+    </select>
+</div>
+</body>
+</html>

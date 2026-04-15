@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso JavaScript I (Programación)</title>
+</head>
+<body>
+    <button onclick="acceso()">Preguntar edad</button>
+    <button onclick="suma()">Suma</button>
+    <button onclick="login()">Login</button>
+    <button onclick="calculaDoble()">Doble</button>
+    <button onclick="diceAlineacion()">Alineación</button>
+    <button onclick="sumaHasta()">Suma n primeros números</button>
+
+    <script>
+        function acceso(){
+		let edad=prompt("dime la edad");
+		if ( edad<18 ) {
+			alert("No puedes entrar");
+		} else {
+			alert("Bienvenido a mi página");
+		}
+	}
+
+    function suma(){
+		let x = prompt("Dime la x");
+		let y = prompt("Dime la y");
+		let suma =  Number(x) + Number(y);
+		alert("La suma es " + suma);
+	}
+
+    function login(){
+		let usuario = prompt("Introduzca usuario");
+		let password = prompt("Introduzca contraseña");
+		if (usuario == "admin" || password=="1234") {
+			alert("Puede acceder a la página");
+		} else {
+			alert("Acceso denegado. Credenciales no válidas");
+		}
+	}
+
+    function doble( n ){
+			return 2*n;
+	}
+	function calculaDoble(){
+		let num=prompt("Dime un número");
+		alert("El doble de " + num + " es " + doble(num));
+	}
+
+    function diceAlineacion(){
+		let alineacion = ['Benzema','Bale','Marcelo','Sergio Ramos'];
+		let posicion = prompt("Dime una posición");
+		alert("En la posición " + posicion + " juega " 
+			+ alineacion[posicion]);
+	}
+
+    function sumaHasta(){
+		let num=prompt("Hasta que número quieres sumar");
+		let suma=0;
+		for ( let i=1; i<=num; i++) {
+			suma = suma + i;
+		}
+		alert("La suma de los " + num + " primeros números es " + suma)
+	}
+    </script>
+</body>
+</html>
